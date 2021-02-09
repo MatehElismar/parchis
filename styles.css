@@ -1,0 +1,33 @@
+table,
+tr,
+td {
+  border: 1px solid black;
+  background: white;
+  position: relative;
+}
+td {
+  padding: 15px;
+}
+.amarillo {
+  background: yellow;
+}
+.rojo {
+  background: red;
+}
+.verde {
+  background: green;
+}
+.azul {
+  background: blue;
+}
+
+.ficha {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 10;
+  margin: 2px;
+}

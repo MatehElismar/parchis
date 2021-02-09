@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Parchis Online</h1>
+    <button id="moveButton">Move Ficha Forward</button>
+
+    <table border="1px">
+      <!-- 1 -->
+      <tr>
+        <td class="amarillo" colspan="7" rowspan="7"></td>
+        <td colspan="2" id="spot-1">1</td>
+        <td class="amarillo camino-amarillo" colspan="2" id="spot-68">68</td>
+        <td colspan="2" id="spot-67">67</td>
+        <td class="verde" colspan="7" rowspan="7"></td>
+      </tr>
+      <!-- 2 -->
+      <tr>
+        <td colspan="2" id="spot-2">2</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-2" colspan="2"></td>
+        <td colspan="2" id="spot-66">66</td>
+      </tr>
+      <!-- 3 -->
+      <tr>
+        <td colspan="2" id="spot-3">3</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-3" colspan="2"></td>
+        <td colspan="2" id="spot-65">
+          65
+          <div id="ficha1" class="ficha ficha-amarilla" data-spot="65"></div>
+        </td>
+      </tr>
+      <!-- 4 -->
+      <tr>
+        <td colspan="2" id="spot-4">4</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-4" colspan="2"></td>
+        <td colspan="2" id="spot-64">64</td>
+      </tr>
+      <!-- 5 -->
+      <tr>
+        <td class="amarillo" colspan="2" id="spot-5" id="spot-5">5</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-5" colspan="2"></td>
+        <td colspan="2" id="spot-63">63</td>
+      </tr>
+      <!-- 6 -->
+      <tr>
+        <td colspan="2" id="spot-6">6</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-6" colspan="2"></td>
+        <td colspan="2" id="spot-62">62</td>
+      </tr>
+      <!-- 7 -->
+      <tr>
+        <td colspan="2" id="spot-7">7</td>
+        <td class="amarillo camino-amarillo" id="spot-amarillo-7" colspan="2"></td>
+        <td colspan="2" id="spot-61">61</td>
+      </tr>
+      <!-- 8 -->
+      <!-- Primera línea justo debajo de los grandes -->
+      <tr>
+        <td rowspan="2" id="spot-16">16</td>
+        <td rowspan="2" id="spot-15">15</td>
+        <td rowspan="2" id="spot-14">14</td>
+        <td rowspan="2" id="spot-13">13</td>
+        <td rowspan="2" id="spot-12">12</td>
+        <td rowspan="2" id="spot-11">11</td>
+        <td rowspan="2" id="spot-10">10</td>
+        <td id="spot-vacio"></td>
+        <td id="spot-8">8</td>
+        <td></td>
+        <td></td>
+        <td id="spot-60">60</td>
+        <td id="spot-vacio"></td>
+        <td rowspan="2" id="spot-58">58</td>
+        <td rowspan="2" id="spot-57">57</td>
+        <td class="verde" rowspan="2" id="spot-56">56</td>
+        <td rowspan="2" id="spot-55">55</td>
+        <td rowspan="2" id="spot-54">54</td>
+        <td rowspan="2" id="spot-53">53</td>
+        <td rowspan="2" id="spot-52">52</td>
+      </tr>
+      <!-- 9 -->
+      <tr>
+        <td id="spot-9">9</td>
+        <td colspan="4" rowspan="4"><img src="ima.jpeg" /></td>
+        <td id="spot-59">59</td>
+      </tr>
+      <!-- 10 -->
+      <tr>
+        <td rowspan="2" id="spot-17">17</td>
+        <td class="azul" rowspan="2"></td>
+        <td class="azul" rowspan="2"></td>
+        <td class="azul" rowspan="2"></td>
+        <td class="azul" rowspan="2"></td>
+        <td class="azul" rowspan="2"></td>
+        <td class="azul" rowspan="2"></td>
+        <td></td>
+        <td></td>
+        <td class="verde" rowspan="2"></td>
+        <td class="verde" rowspan="2"></td>
+        <td class="verde" rowspan="2"></td>
+        <td class="verde" rowspan="2"></td>
+        <td class="verde" rowspan="2"></td>
+        <td class="verde" rowspan="2"></td>
+        <td rowspan="2" id="spot-51" id="spot-51">51</td>
+      </tr>
+      <!-- 11 -->
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <!-- 12 -->
+      <tr>
+        <td rowspan="2" id="spot-18">18</td>
+        <td rowspan="2" id="spot-19">19</td>
+        <td rowspan="2" id="spot-20">20</td>
+        <td rowspan="2" id="spot-21">21</td>
+        <td class="azul" rowspan="2" id="spot-22">22</td>
+        <td rowspan="2" id="spot-23">23</td>
+        <td rowspan="2" id="spot-24">24</td>
+        <td id="spot-25">25</td>
+        <td id="spot-43">43</td>
+        <td rowspan="2" id="spot-44">44</td>
+        <td rowspan="2" id="spot-45">45</td>
+        <td rowspan="2" id="spot-46">46</td>
+        <td rowspan="2" id="spot-47">47</td>
+        <td rowspan="2" id="spot-48">48</td>
+        <td rowspan="2" id="spot-49">49</td>
+        <td rowspan="2" id="spot-50" id="spot-50">50</td>
+      </tr>
+      <!-- 13 -->
+      <tr>
+        <td id="spot-vacio"></td>
+        <td id="spot-26">26</td>
+        <td></td>
+        <td></td>
+        <td id="spot-42">42</td>
+        <td id="spot-vacio"></td>
+      </tr>
+      <!-- 14 -->
+      <tr>
+        <td class="azul" colspan="7" rowspan="7"></td>
+        <td colspan="2" id="spot-27">27</td>
+        <td class="rojo" colspan="2"></td>
+        <td colspan="2" id="spot-41">41</td>
+        <td class="rojo" colspan="7" rowspan="7"></td>
+      </tr>
+      <!-- 15 -->
+      <tr>
+        <td colspan="2" id="spot-28">28</td>
+        <td class="rojo" colspan="2">-</td>
+        <td colspan="2" id="spot-40">40</td>
+      </tr>
+      <!-- 16 -->
+      <tr>
+        <td colspan="2" id="spot-29">29</td>
+        <td class="rojo" colspan="2"></td>
+        <td class="rojo" colspan="2" id="spot-39">39</td>
+      </tr>
+      <!-- 17 -->
+      <tr>
+        <td colspan="2" id="spot-30">30</td>
+        <td class="rojo" colspan="2">-</td>
+        <td colspan="2" id="spot-38">38</td>
+      </tr>
+      <!-- 18 -->
+      <tr>
+        <td colspan="2" id="spot-31">31</td>
+        <td class="rojo" colspan="2"></td>
+        <td colspan="2" id="spot-37">37</td>
+      </tr>
+      <!-- 19 -->
+      <tr>
+        <td colspan="2" id="spot-32">32</td>
+        <td class="rojo" colspan="2"></td>
+        <td colspan="2" id="spot-36">36</td>
+      </tr>
+      <!-- 20 -->
+      <tr>
+        <td colspan="2" id="spot-33">33</td>
+        <td colspan="2" id="spot-34">34</td>
+        <td colspan="2" id="spot-35">35</td>
+      </tr>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
