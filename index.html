@@ -6,37 +6,78 @@
   </head>
   <body>
     <h1>Parchis Online</h1>
-    <button id="sacarButton">Sacar Ficha</button>
-    <button id="moveButton">Mover Ficha</button>
+    <button id="startButton">Start</button>
     <form></form>
     <table border="1px">
       <!-- 1 -->
       <tr>
-        <td class="amarillo" colspan="7" rowspan="7">
-          <div id="ficha1" class="ficha amarillo relative dropdown dropbtn" data-color="amarillo" data-spot="0">
+        <td id="amarillo-home" class="amarillo" colspan="7" rowspan="7">
+          <div id="ficha1" class="ficha amarillo relative dropbtn" data-color="amarillo" data-spot="0">
             <span class="">A</span>
             <div class="dropdown-content">
-              <a id="dado1-result"></a>
-              <a id="dado2-result"></a>
+              <button onclick="onDiceClick('ficha1', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha1', event)" class="dado2-result"></button>
             </div>
           </div>
           <div class="dropdown"></div>
-          <div id="ficha2" class="ficha amarillo relative" data-color="amarillo" data-spot="0">B</div>
-          <div id="ficha3" class="ficha amarillo relative" data-color="amarillo" data-spot="0">C</div>
-          <div id="ficha4" class="ficha amarillo relative" data-color="amarillo" data-spot="0">D</div>
+          <div id="ficha2" class="ficha amarillo relative dropbtn" data-color="amarillo" data-spot="0">
+            <span class="">B</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha2', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha2', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha3" class="ficha amarillo relative dropbtn" data-color="amarillo" data-spot="0">
+            <span class="">C</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha3', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha4', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha4" class="ficha amarillo relative dropbtn" data-color="amarillo" data-spot="0">
+            <span class="">D</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha4', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha4', event)" class="dado2-result"></button>
+            </div>
+          </div>
 
-          <img src="" name="ima1" />
-          <img src="" name="ima2" />
-          <input type="button" value="Lanzar" onclick="tirar()" />
+          <img id="dado1-imagen" class="hidden" src="" name="ima1" />
+          <img id="dado2-imagen" class="hidden" src="" name="ima2" />
+          <input id="lanzarButton" class="hidden" type="button" value="Lanzar" onclick="tirar()" />
         </td>
         <td colspan="2" id="spot-1">1</td>
         <td class="amarillo camino" data-color="amarillo" colspan="2" id="spot-68">68</td>
         <td colspan="2" id="spot-67">67</td>
-        <td class="verde" colspan="7" rowspan="7">
-          <div id="ficha5" class="ficha verde relative" data-color="verde" data-spot="0">A</div>
-          <div id="ficha6" class="ficha verde relative" data-color="verde" data-spot="0">B</div>
-          <div id="ficha7" class="ficha verde relative" data-color="verde" data-spot="0">C</div>
-          <div id="ficha8" class="ficha verde relative" data-color="verde" data-spot="0">D</div>
+        <td id="verde-home" class="verde" colspan="7" rowspan="7">
+          <div id="ficha5" class="ficha verde relative dropbtn" data-color="verde" data-spot="0">
+            <span class="">A</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha5', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha5', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha6" class="ficha verde relative dropbtn" data-color="verde" data-spot="0">
+            <span class="">B</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha6', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha6', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha7" class="ficha verde relative dropbtn" data-color="verde" data-spot="0">
+            <span class="">C</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha7', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha8', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha8" class="ficha verde relative dropbtn" data-color="verde" data-spot="0">
+            <span class="">D</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha8', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha8', event)" class="dado2-result"></button>
+            </div>
+          </div>
         </td>
       </tr>
       <!-- 2 -->
@@ -159,20 +200,68 @@
       </tr>
       <!-- 14 -->
       <tr>
-        <td class="azul" colspan="7" rowspan="7">
-          <div id="ficha9" class="ficha azul relative" data-color="azul" data-spot="0">A</div>
-          <div id="ficha10" class="ficha azul relative" data-color="azul" data-spot="0">B</div>
-          <div id="ficha11" class="ficha azul relative" data-color="azul" data-spot="0">C</div>
-          <div id="ficha12" class="ficha azul relative" data-color="azul" data-spot="0">D</div>
+        <td id="azul-home" class="azul" colspan="7" rowspan="7">
+          <div id="ficha9" class="ficha azul relative dropbtn" data-color="azul" data-spot="0">
+            <span class="">A</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha9', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha9', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha10" class="ficha azul relative dropbtn" data-color="azul" data-spot="0">
+            <span class="">B</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha10', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha10', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha11" class="ficha azul relative dropbtn" data-color="azul" data-spot="0">
+            <span class="">C</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha11', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha11', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha12" class="ficha azul relative dropbtn" data-color="azul" data-spot="0">
+            <span class="">D</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha12', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha12', event)" class="dado2-result"></button>
+            </div>
+          </div>
         </td>
         <td colspan="2" id="spot-27">27</td>
         <td class="rojo camino" data-color="rojo" id="spot-rojo-7" colspan="2"></td>
         <td colspan="2" id="spot-41">41</td>
-        <td class="rojo" colspan="7" rowspan="7">
-          <div id="ficha13" class="ficha rojo relative" data-color="rojo" data-spot="0">A</div>
-          <div id="ficha14" class="ficha rojo relative" data-color="rojo" data-spot="0">B</div>
-          <div id="ficha15" class="ficha rojo relative" data-color="rojo" data-spot="0">C</div>
-          <div id="ficha16" class="ficha rojo relative" data-color="rojo" data-spot="0">D</div>
+        <td id="rojo-home" class="rojo" colspan="7" rowspan="7">
+          <div id="ficha13" class="ficha rojo relative dropbtn" data-color="rojo" data-spot="0">
+            <span class="">A</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha13', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha13', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha14" class="ficha rojo relative dropbtn" data-color="rojo" data-spot="0">
+            <span class="">B</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha14', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha14', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha15" class="ficha rojo relative dropbtn" data-color="rojo" data-spot="0">
+            <span class="">C</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha15', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha15', event)" class="dado2-result"></button>
+            </div>
+          </div>
+          <div id="ficha16" class="ficha rojo relative dropbtn" data-color="rojo" data-spot="0">
+            <span class="">D</span>
+            <div class="dropdown-content">
+              <button onclick="onDiceClick('ficha16', event)" class="dado1-result"></button>
+              <button onclick="onDiceClick('ficha16', event)" class="dado2-result"></button>
+            </div>
+          </div>
         </td>
       </tr>
       <!-- 15 -->
