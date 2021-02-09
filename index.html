@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>game</title>
+    <title>Parchis Online</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Parchis Online</h1>
-    <button id="moveButton">Move Ficha Forward</button>
-
+    <button id="sacarButton">Sacar Ficha</button>
+    <button id="moveButton">Mover Ficha</button>
+    <form></form>
     <table border="1px">
       <!-- 1 -->
       <tr>
-        <td class="amarillo" colspan="7" rowspan="7"></td>
+        <td class="amarillo" colspan="7" rowspan="7">
+          <div id="ficha1" class="ficha amarillo relative dropdown dropbtn" data-color="amarillo" data-spot="0">
+            <span class="">A</span>
+            <div class="dropdown-content">
+              <a id="dado1-result"></a>
+              <a id="dado2-result"></a>
+            </div>
+          </div>
+          <div class="dropdown"></div>
+          <div id="ficha2" class="ficha amarillo relative" data-color="amarillo" data-spot="0">B</div>
+          <div id="ficha3" class="ficha amarillo relative" data-color="amarillo" data-spot="0">C</div>
+          <div id="ficha4" class="ficha amarillo relative" data-color="amarillo" data-spot="0">D</div>
+
+          <img src="" name="ima1" />
+          <img src="" name="ima2" />
+          <input type="button" value="Lanzar" onclick="tirar()" />
+        </td>
         <td colspan="2" id="spot-1">1</td>
-        <td class="amarillo camino-amarillo" colspan="2" id="spot-68">68</td>
+        <td class="amarillo camino" data-color="amarillo" colspan="2" id="spot-68">68</td>
         <td colspan="2" id="spot-67">67</td>
-        <td class="verde" colspan="7" rowspan="7"></td>
+        <td class="verde" colspan="7" rowspan="7">
+          <div id="ficha5" class="ficha verde relative" data-color="verde" data-spot="0">A</div>
+          <div id="ficha6" class="ficha verde relative" data-color="verde" data-spot="0">B</div>
+          <div id="ficha7" class="ficha verde relative" data-color="verde" data-spot="0">C</div>
+          <div id="ficha8" class="ficha verde relative" data-color="verde" data-spot="0">D</div>
+        </td>
       </tr>
       <!-- 2 -->
       <tr>
         <td colspan="2" id="spot-2">2</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-2" colspan="2"></td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-2" colspan="2"></td>
         <td colspan="2" id="spot-66">66</td>
       </tr>
       <!-- 3 -->
       <tr>
         <td colspan="2" id="spot-3">3</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-3" colspan="2"></td>
-        <td colspan="2" id="spot-65">
-          65
-          <div id="ficha1" class="ficha ficha-amarilla" data-spot="65"></div>
-        </td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-3" colspan="2"></td>
+        <td colspan="2" id="spot-65">65</td>
       </tr>
       <!-- 4 -->
       <tr>
         <td colspan="2" id="spot-4">4</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-4" colspan="2"></td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-4" colspan="2"></td>
         <td colspan="2" id="spot-64">64</td>
       </tr>
       <!-- 5 -->
       <tr>
         <td class="amarillo" colspan="2" id="spot-5" id="spot-5">5</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-5" colspan="2"></td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-5" colspan="2"></td>
         <td colspan="2" id="spot-63">63</td>
       </tr>
       <!-- 6 -->
       <tr>
         <td colspan="2" id="spot-6">6</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-6" colspan="2"></td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-6" colspan="2"></td>
         <td colspan="2" id="spot-62">62</td>
       </tr>
       <!-- 7 -->
       <tr>
         <td colspan="2" id="spot-7">7</td>
-        <td class="amarillo camino-amarillo" id="spot-amarillo-7" colspan="2"></td>
+        <td class="amarillo camino" data-color="amarillo" id="spot-amarillo-7" colspan="2"></td>
         <td colspan="2" id="spot-61">61</td>
       </tr>
       <!-- 8 -->
@@ -88,22 +107,22 @@
       </tr>
       <!-- 10 -->
       <tr>
-        <td rowspan="2" id="spot-17">17</td>
-        <td class="azul" rowspan="2"></td>
-        <td class="azul" rowspan="2"></td>
-        <td class="azul" rowspan="2"></td>
-        <td class="azul" rowspan="2"></td>
-        <td class="azul" rowspan="2"></td>
-        <td class="azul" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" rowspan="2" id="spot-17">17</td>
+        <td class="azul camino" data-color="azul" id="spot-azul-2" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" id="spot-azul-3" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" id="spot-azul-4" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" id="spot-azul-5" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" id="spot-azul-6" rowspan="2"></td>
+        <td class="azul camino" data-color="azul" id="spot-azul-7" rowspan="2"></td>
         <td></td>
         <td></td>
-        <td class="verde" rowspan="2"></td>
-        <td class="verde" rowspan="2"></td>
-        <td class="verde" rowspan="2"></td>
-        <td class="verde" rowspan="2"></td>
-        <td class="verde" rowspan="2"></td>
-        <td class="verde" rowspan="2"></td>
-        <td rowspan="2" id="spot-51" id="spot-51">51</td>
+        <td class="verde camino" data-color="verde" id="spot-verde-7" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" id="spot-verde-6" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" id="spot-verde-5" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" id="spot-verde-4" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" id="spot-verde-3" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" id="spot-verde-2" rowspan="2"></td>
+        <td class="verde camino" data-color="verde" rowspan="2" id="spot-51" id="spot-51">51</td>
       </tr>
       <!-- 11 -->
       <tr>
@@ -140,46 +159,56 @@
       </tr>
       <!-- 14 -->
       <tr>
-        <td class="azul" colspan="7" rowspan="7"></td>
+        <td class="azul" colspan="7" rowspan="7">
+          <div id="ficha9" class="ficha azul relative" data-color="azul" data-spot="0">A</div>
+          <div id="ficha10" class="ficha azul relative" data-color="azul" data-spot="0">B</div>
+          <div id="ficha11" class="ficha azul relative" data-color="azul" data-spot="0">C</div>
+          <div id="ficha12" class="ficha azul relative" data-color="azul" data-spot="0">D</div>
+        </td>
         <td colspan="2" id="spot-27">27</td>
-        <td class="rojo" colspan="2"></td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-7" colspan="2"></td>
         <td colspan="2" id="spot-41">41</td>
-        <td class="rojo" colspan="7" rowspan="7"></td>
+        <td class="rojo" colspan="7" rowspan="7">
+          <div id="ficha13" class="ficha rojo relative" data-color="rojo" data-spot="0">A</div>
+          <div id="ficha14" class="ficha rojo relative" data-color="rojo" data-spot="0">B</div>
+          <div id="ficha15" class="ficha rojo relative" data-color="rojo" data-spot="0">C</div>
+          <div id="ficha16" class="ficha rojo relative" data-color="rojo" data-spot="0">D</div>
+        </td>
       </tr>
       <!-- 15 -->
       <tr>
         <td colspan="2" id="spot-28">28</td>
-        <td class="rojo" colspan="2">-</td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-6" colspan="2">-</td>
         <td colspan="2" id="spot-40">40</td>
       </tr>
       <!-- 16 -->
       <tr>
         <td colspan="2" id="spot-29">29</td>
-        <td class="rojo" colspan="2"></td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-5" colspan="2"></td>
         <td class="rojo" colspan="2" id="spot-39">39</td>
       </tr>
       <!-- 17 -->
       <tr>
         <td colspan="2" id="spot-30">30</td>
-        <td class="rojo" colspan="2">-</td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-4" colspan="2">-</td>
         <td colspan="2" id="spot-38">38</td>
       </tr>
       <!-- 18 -->
       <tr>
         <td colspan="2" id="spot-31">31</td>
-        <td class="rojo" colspan="2"></td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-3" colspan="2"></td>
         <td colspan="2" id="spot-37">37</td>
       </tr>
       <!-- 19 -->
       <tr>
         <td colspan="2" id="spot-32">32</td>
-        <td class="rojo" colspan="2"></td>
+        <td class="rojo camino" data-color="rojo" id="spot-rojo-2" colspan="2"></td>
         <td colspan="2" id="spot-36">36</td>
       </tr>
       <!-- 20 -->
       <tr>
         <td colspan="2" id="spot-33">33</td>
-        <td colspan="2" id="spot-34">34</td>
+        <td class="rojo camino" data-color="rojo" colspan="2" id="spot-34">34</td>
         <td colspan="2" id="spot-35">35</td>
       </tr>
     </table>
