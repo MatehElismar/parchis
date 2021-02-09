@@ -1,5 +1,5 @@
-*{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 table,
@@ -37,10 +37,10 @@ td {
   margin: 2px;
 }
 
-.top{
+.top {
   border-top-style: none;
 }
-.bot{
+.bot {
   border-bottom-style: none;
 }
 .relative {
@@ -98,46 +98,40 @@ td {
   display: none;
 }
 
-#lanzarButton,#startButton{
+#lanzarButton,
+#startButton {
   width: 100px;
   height: 50px;
   font-size: 25px;
 }
 
-.dado1-result,.dado2-result{
+.dado1-result,
+.dado2-result {
   width: 25px;
   height: 25px;
   margin-top: 14px;
 }
 
-.dropdown-content{
+.dropdown-content {
   width: 50px;
   height: 50px;
 }
 
-
-
 /*   here y put a new image's size */
 
-
 #dado1-imagen {
-  width: 80px;
+  width: 50px;
   padding: 10px;
   position: absolute;
   top: 30px;
-
 }
 
-#dado2-imagen{
-
-  width: 80px;
+#dado2-imagen {
+  width: 50px;
   padding: 10px;
   position: absolute;
   top: 120px;
-
 }
-
-
 
 .container-fluid {
   width: 25%;
@@ -147,14 +141,10 @@ td {
   margin-left: auto;
 }
 
-
-.name1{
-
+.name1 {
   padding-bottom: 30px;
-
 }
 
-body{
-
+body {
   text-align: center;
 }
