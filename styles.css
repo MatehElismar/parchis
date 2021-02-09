@@ -30,7 +30,7 @@ td {
   text-align: center;
   width: 25px;
   height: 25px;
-  z-index: 10;
+  z-index: 10px;
   position: absolute;
   top: 0;
   left: 10;
@@ -113,4 +113,48 @@ td {
 .dropdown-content{
   width: 50px;
   height: 50px;
+}
+
+
+
+/*   here y put a new image's size */
+
+
+#dado1-imagen {
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+  top: 30px;
+
+}
+
+#dado2-imagen{
+
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+  top: 120px;
+
+}
+
+
+
+.container-fluid {
+  width: 25%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.name1{
+
+  padding-bottom: 30px;
+
+}
+
+body{
+
+  text-align: center;
 }
