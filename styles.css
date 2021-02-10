@@ -1,3 +1,7 @@
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 table,
 tr,
 td {
@@ -92,4 +96,21 @@ td {
 
 .hidden {
   display: none;
+}
+
+#lanzarButton,#startButton{
+  width: 100px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.dado1-result,.dado2-result{
+  width: 25px;
+  height: 25px;
+  margin-top: 14px;
+}
+
+.dropdown-content{
+  width: 50px;
+  height: 50px;
 }
